@@ -18,9 +18,11 @@ search([<span class="tag pla"></span>](../types.md) player, [<span class="tag in
 
 
 !!!info "search(player, max_cards)"
-    * [<span class="tag pla"></span>](../types.md) **player**: The player to show the Search window to.
+    * [<span class="tag pla"></span>](../types.md) **player color**: The player to show the Search window to.
     * [<span class="tag int"></span>](../types.md) **max_cards**: Optional maximum number of cards to show.
 
 ``` Lua
-deck.Container.search(Player.Blue, 3)
+deck.Container.search(Player.Blue.color, 3) -- search only on the top 3 cards
+
+otherDeck.Container.search("Red") -- unlimited search
 ```
